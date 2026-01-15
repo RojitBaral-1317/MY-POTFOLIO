@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rojit Baral | Portfolio</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+  <div class="logo">Rojit Baral</div>
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO SECTION -->
+<section id="hero" class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Rojit Baral</h1>
+      <p class="tagline"><span id="typed"></span></p>
+      <p class="intro">19 y/o • Nepal • 1st Sem Student at MechiMultiple Campus | BSc CSIT</p>
+      <div class="socials">
+        <a href="https://www.instagram.com/rojit_baral" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/1C9Km9siVU/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/in/rojit-baral-665a5a3a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/RojitBaral-1317" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:rojitbaral29@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a href="https://wa.me/9779700454594" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="hero-border">
+        <img src="profile.jpeg" alt="Rojit Baral Profile">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="section about">
+  <h2>About Me</h2>
+  <p>
+    Hey! I’m Rojit, a 19-year-old aspiring web developer from Nepal.  
+    I fell in love with coding when I realized I could turn ideas into real websites and apps.  
+    Currently pursuing BSc CSIT at MechiMultiple Campus, Bhadrapur.  
+    I enjoy creating interactive, colorful, and user-friendly web experiences.  
+    Fast learner, problem solver, and always excited to build new projects! 💻🚀
+  </p>
+</section>
+
+<!-- SKILLS SECTION -->
+<section id="skills" class="section gray">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill-card">
+      <i class="fab fa-html5"></i>
+      <span>HTML</span>
+      <div class="skill-bar"><div class="skill-level" data-width="90%"></div></div>
+    </div>
+    <div class="skill-card">
+      <i class="fab fa-css3-alt"></i>
+      <span>CSS</span>
+      <div class="skill-bar"><div class="skill-level" data-width="85%"></div></div>
+    </div>
+    <div class="skill-card">
+      <i class="fab fa-php"></i>
+      <span>PHP</span>
+      <div class="skill-bar"><div class="skill-level" data-width="75%"></div></div>
+    </div>
+    <div class="skill-card">
+      <i class="fab fa-python"></i>
+      <span>Python</span>
+      <div class="skill-bar"><div class="skill-level" data-width="80%"></div></div>
+    </div>
+    <div class="skill-card">
+      <i class="fas fa-laptop-code"></i>
+      <span>Laravel</span>
+      <div class="skill-bar"><div class="skill-level" data-width="70%"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="section">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="card" onclick="openModal('Portfolio Website','My personal portfolio built with HTML, CSS, and JS.')">
+      <img src="https://via.placeholder.com/300x150.png?text=Portfolio+Website" alt="Portfolio Project">
+      <h3>Portfolio Website</h3>
+      <p>Click to view details</p>
+    </div>
+    <div class="card" onclick="openModal('Laravel Blog','A blog platform created using Laravel and PHP.')">
+      <img src="https://via.placeholder.com/300x150.png?text=Laravel+Blog" alt="Laravel Blog Project">
+      <h3>Laravel Blog</h3>
+      <p>Click to view details</p>
+    </div>
+    <div class="card" onclick="openModal('Coming Soon','More exciting projects coming soon!')">
+      <img src="https://via.placeholder.com/300x150.png?text=Coming+Soon" alt="Future Project">
+      <h3>Coming Soon</h3>
+      <p>Click to view details</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT MODAL -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+  </div>
+</div>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="section gray">
+  <h2>Contact Me</h2>
+  <p class="contact-text">Drop me a message, I promise I won’t bite 🐱‍💻</p>
+
+  <!-- Formspree Form -->
+  <form action="https://formspree.io/f/xnjjnbyl" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="_replyto" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <p style="margin-top:10px;font-size:0.9rem;opacity:0.8;">After submitting, you will receive a confirmation message.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Rojit Baral | Made with ☕ & 💻</p>
+  <div class="socials">
+    <a href="https://www.instagram.com/rojit_baral" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/share/1C9Km9siVU/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.linkedin.com/in/rojit-baral-665a5a3a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://github.com/RojitBaral-1317" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="mailto:rojitbaral29@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    <a href="https://wa.me/9779700454594" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</footer>
+
+<!-- Typed.js -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<!-- Scripts -->
+<script>
+  // Typing effect
+  var typed = new Typed('#typed', {
+    strings: ["Fast learner, coffee-powered coder ☕, building the web one pixel at a time!"],
+    typeSpeed: 50,
+    backSpeed: 25,
+    loop: true
+  });
+
+  // Scroll animations
+  const sections = document.querySelectorAll('.section, .hero');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){ entry.target.classList.add('show'); }
+    });
+  }, { threshold:0.2 });
+  sections.forEach(section => observer.observe(section));
+
+  // Skill bars
+  const skillLevels = document.querySelectorAll('.skill-level');
+  const skillObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){ entry.target.style.width = entry.target.dataset.width; }
+    });
+  }, { threshold:0.5 });
+  skillLevels.forEach(sl => skillObserver.observe(sl));
+
+  // Project modal
+  function openModal(title, desc){
+    document.getElementById('modalTitle').innerText = title;
+    document.getElementById('modalDesc').innerText = desc;
+    document.getElementById('projectModal').style.display='flex';
+  }
+  function closeModal(){ document.getElementById('projectModal').style.display='none'; }
+  window.onclick=function(e){ if(e.target==document.getElementById('projectModal')) closeModal(); }
+</script>
+</body>
+</html>
