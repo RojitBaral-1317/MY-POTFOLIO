@@ -19,6 +19,12 @@
 <!-- NAVIGATION -->
 <nav class="navbar">
   <div class="logo">Rojit Baral</div>
+ <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  
   <ul class="nav-links">
     <li><a href="#hero">Home</a></li>
     <li><a href="#about">About</a></li>
@@ -56,11 +62,13 @@
 <section id="about" class="section about">
   <h2>About Me</h2>
   <p>
-    Hey! I’m Rojit, a 19-year-old aspiring web developer from Nepal.  
-    I fell in love with coding when I realized I could turn ideas into real websites and apps.  
-    Currently pursuing BSc CSIT at Mechi Multiple Campus, Bhadrapur.  
-    I enjoy creating interactive, colorful, and user-friendly web experiences.  
-    Fast learner, problem solver, and always excited to build new projects! 💻🚀
+    👋 Hi! I’m <strong>Rojit Baral</strong>, a 19-year-old web developer from <strong>Nepal</strong>.  
+    I love transforming ideas into <strong>beautiful, interactive websites and apps</strong> that people enjoy using.  
+    Currently, I’m pursuing <strong>BSc CSIT at Mechi Multiple Campus, Bhadrapur</strong>, sharpening my coding and problem-solving skills every day.  
+    💡 I’m passionate about <strong>creative web design, smooth user experiences, and clean code</strong>.  
+    Fast learner, coffee-powered coder ☕, and always excited to tackle <strong>new challenges and projects</strong>!  
+    Let’s build something amazing together! 🚀
+  </p>
   </p>
 </section>
 
@@ -166,10 +174,10 @@
 <script>
   // Typing effect
   var typed = new Typed('#typed', {
-    strings: ["Fast learner, coffee-powered coder ☕, building the web one pixel at a time!"],
+    strings: ["Student web developer crafting interactive experiences and growing every step on the way!"],
     typeSpeed: 50,
     backSpeed: 25,
-    loop: true
+    loop: false
   });
 
   // Scroll animations
@@ -199,5 +207,23 @@
   function closeModal(){ document.getElementById('projectModal').style.display='none'; }
   window.onclick=function(e){ if(e.target==document.getElementById('projectModal')) closeModal(); }
 </script>
+  <script>
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("navLinks");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("active");
+  });
+
+  // Close menu when link clicked
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navLinks.classList.remove("active");
+    });
+  });
+</script>
+
 </body>
 </html>
